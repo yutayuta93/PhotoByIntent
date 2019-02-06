@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PhotoByIntent</string>
+    <string name="hello">Hello world, PhotoIntentActivity!</string>
+    <string name="btnIntent">Take (Big) Photo</string>
+    <string name="btnIntentS">Take (Small) Photo</string>
+    <string name="btnIntentV">Take Video</string>
+    <string name="cannnot">Cannot</string>
+    <string name="album_name">CameraSample</string>
+</resources>
