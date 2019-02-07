@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnIntent = (Button)findViewById(R.id.btnIntent);
-        setBtnListenerOrDisable(btnIntent,createOnClickListener(ACTION_TAKE_PHOTO),MediaStore
+        Button btnIntentS = (Button)findViewById(R.id.btnIntentS);
+        setBtnListenerOrDisable(btnIntentS,createOnClickListener(ACTION_TAKE_PHOTO_SMALL),MediaStore
                 .ACTION_IMAGE_CAPTURE);
 
         mImageView = (ImageView)findViewById(R.id.imageView1);
@@ -84,13 +84,12 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode){
             case ACTION_TAKE_PHOTO:
                 if(resultCode == RESULT_OK){
-                    handleCameraPhoto(data);
                 }
                 break;
 
             case ACTION_TAKE_PHOTO_SMALL:
                 if(resultCode == RESULT_OK){
-
+                    handleSmallCameraPhoto(data);
                 }
                 break;
 
@@ -103,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void handleCameraPhoto(Intent intent){
+    private void handleSmallCameraPhoto(Intent intent){
         Uri data = intent.getData();
         if(data != null) {
             Log.d("RESULT_DATA", data.toString());
